@@ -12,6 +12,7 @@ Your submission for assignment is going to be rejected if -
 <li>MVP/ MVVM pattern is not implemented</li>
 <li>Dagger 2 is not used</li>
 </ol>
+<br>
 Your Android submission will stand a better chance of selection if -
 <ol>
 <li>You have frequent git commits with clear commit messages</li>
