@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Zolostays</string>
+
+    <!--Login Screen-->
+    <string name="login_email">EMAIL</string>
+    <string name="login_password">PASSWORD</string>
+    <string name="login_button">LOG IN</string>
+    <string name="login_forgot_password">Forgot password?</string>
+    <string name="login_create_account">CREATE ACCOUNT</string>
 </resources>
