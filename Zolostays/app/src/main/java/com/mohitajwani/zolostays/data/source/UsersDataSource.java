@@ -31,5 +31,5 @@ public interface UsersDataSource {
 
     void loadAllUsers(@NonNull LoadUsersCallback callback);
 
-    void saveUser(@NonNull User user, @NonNull GetUserCallback callback);
+    void createUser(@NonNull User user, @NonNull GetUserCallback callback);
 }

@@ -10,6 +10,8 @@ import com.mohitajwani.zolostays.util.ActivityUtils;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public static final String USER_VIEWMODEL_TAG = "USER_VIEWMODEL_TAG";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         @SuppressWarnings("unchecked")
         ViewModelHolder<UserViewModel> retainedViewModel =
                 (ViewModelHolder<UserViewModel>) getSupportFragmentManager()
-                        .findFragmentByTag(TASKS_VIEWMODEL_TAG);
+                        .findFragmentByTag(USER_VIEWMODEL_TAG);
 
         if (retainedViewModel != null && retainedViewModel.getViewmodel() != null) {
             // If the model was retained, return it.
@@ -30,13 +32,13 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             // There is no ViewModel yet, create it.
             UserViewModel viewModel = new UserViewModel(
-                    Injection.provideTasksRepository(getApplicationContext()),
-                    getApplicationContext());
+                    getApplicationContext(),
+                    Injection.provideTasksRepository(getApplicationContext()));
             // and bind it to this Activity's lifecycle using the Fragment Manager.
             ActivityUtils.addFragmentToActivity(
                     getSupportFragmentManager(),
                     ViewModelHolder.createContainer(viewModel),
-                    TASKS_VIEWMODEL_TAG);
+                    USER_VIEWMODEL_TAG);
             return viewModel;
         }
     }

@@ -77,7 +77,7 @@ public class UsersRepository implements UsersDataSource {
     }
 
     @Override
-    public void saveUser(@NonNull User user, @NonNull GetUserCallback callback) {
+    public void createUser(@NonNull User user, @NonNull GetUserCallback callback) {
         if (mCachedUsers == null) {
             mCachedUsers = new LinkedHashMap<>();
         } else {

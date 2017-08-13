@@ -78,7 +78,7 @@ public class UsersLocalDataSource implements UsersDataSource {
     }
 
     @Override
-    public void saveUser(@NonNull User user, @NonNull GetUserCallback callback) {
+    public void createUser(@NonNull User user, @NonNull GetUserCallback callback) {
         checkNotNull(user);
         SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
