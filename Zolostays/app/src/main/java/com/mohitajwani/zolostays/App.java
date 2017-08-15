@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * Created by Mohit Ajwani.
+ * Application class
  */
 
 public class App extends Application {
