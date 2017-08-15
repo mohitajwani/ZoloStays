@@ -14,6 +14,7 @@ import java.util.List;
 
 public class App extends Application {
 
+	//Array List to handle copy of users w/o querying db multiple times
     private List<User> userList;
 
     @Override
